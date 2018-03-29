@@ -30,6 +30,8 @@ If large numbers of tests are failing, run it with `--stop` to stop at the first
 
 ## Plans
 
+1. Create tests for a site that uses React.js such as: https://reactjs.org/
+
 1. Expand behave examples from the official docs: http://behave.readthedocs.io/en/latest/
 
 1. Expand selenium examples from the official package docs: http://selenium-python.readthedocs.io/index.html
