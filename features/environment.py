@@ -1,7 +1,7 @@
 # -- FILE: features/environment.py
 # CONTAINS: Browser fixture setup and teardown
 from behave import fixture, use_fixture
-from fixtures import browser_firefox
+from fixtures import browser_firefox, browser_chrome
 
 BEHAVE_DEBUG_ON_ERROR = False
 
@@ -21,6 +21,8 @@ def before_scenario(context,scenario):
 def before_tag(context,tag):
     if tag == 'fixture.browser.firefox':
         use_fixture(browser_firefox, context, timeout=10)
+    if tag == 'fixture.browser.chrome':
+        use_fixture(browser_chrome, context, timeout=10)
 
 def before_step(context, step):
     context.notSet = True
