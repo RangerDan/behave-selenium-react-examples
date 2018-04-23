@@ -102,3 +102,6 @@ ENV/
 
 # PyCharm
 .idea/
+
+# behave test artifacts
+screenshots/
