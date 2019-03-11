@@ -10,7 +10,7 @@ This project is not yet packaged.  Install the following packages before attempt
 
 * behave - $ pip3 install behave
 
-* selenium - $ pips3 install selenium
+* selenium - $ pip3 install selenium
 
 * firefox
 
