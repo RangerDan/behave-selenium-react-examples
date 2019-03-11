@@ -14,11 +14,13 @@ This project is not yet packaged.  Install the following packages before attempt
 
 * firefox
 
-* geckodriver from https://github.com/mozilla/geckodriver/releases, ensure it is in your PATH
+* Grab the latest geckodriver from https://github.com/mozilla/geckodriver/releases; extract it to a location on your hard drive, and ensure it is in your PATH
 
 * chrome
 
-* ChromeDriver from https://sites.google.com/a/chromium.org/chromedriver/, ensure it is in your PATH
+* Grab the ChromeDriver that matches your Chrome version from https://sites.google.com/a/chromium.org/chromedriver/; extract it to a location on your hard drive, and ensure it is in your PATH
+
+* To run the Codecademy user management scripts, replace the stand-in username and password with your own in features/fixtures.py:34
 
 ## Running
 
