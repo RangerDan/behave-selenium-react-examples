@@ -5,8 +5,7 @@ Feature: Account management on codecademy using saved credentials
 
 @fixture.browser.firefox @fixture.ca.credentials
 Scenario: Log in from home page
-  Given I navigate to "https://www.codecademy.com/"
-  And I click the login tab
+  Given I navigate to "https://www.codecademy.com/login"
   When I select the input field named "user[login]"
   And I key into the current element stored value "username"
   And I select the element by id "login__user_password"
@@ -18,7 +17,7 @@ Scenario: Log in from home page
 @fixture.browser.firefox @fixture.ca.credentials
 Scenario: Check for alerts
   Given I log in on codecademy
-  When I select the element by css "[class='new-cc-icon icon-bell']"
+  When I select the element by css "div[class^='bell']"
   And I click the current element
   And I take a screenshot and name it "notifications"
   Then the notifications popup displays
@@ -29,7 +28,6 @@ Scenario: View Profile
   When I click my profile picture
   Then the account popover displays
   And a link to My Account is in the popup
-  And a link to the Community Forums is in the popup
   And a link to Help is in the popup
   And a link to Logout is in the popup
   And I take a screenshot and name it "myaccountpopup"

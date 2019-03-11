@@ -202,11 +202,11 @@ def step_impl(context):
 @step(u'I change my password from stored "{old_pass}" to stored "{new_pass}"')
 def step_impl(context, old_pass, new_pass):
     wait = WebDriverWait(context.browser, timeout=10)
-    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="user_password"]')))
+    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="password"]')))
     elem.send_keys(context.store[new_pass])
-    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="user_password_confirmation"]')))
+    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="password_confirmation"]')))
     elem.send_keys(context.store[new_pass])
-    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="user_current_password"]')))
+    elem = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[id="current_password"]')))
     elem.send_keys(context.store[old_pass])
     elem.submit()
 
@@ -224,8 +224,7 @@ def step_impl(context, query, test_url):
 @given(u'I log in on codecademy')
 def step_impl(context):
     context.execute_steps(u'''
-        Given I navigate to "https://www.codecademy.com"
-        And I click the login tab
+        Given I navigate to "https://www.codecademy.com/login"
         When I select the input field named "user[login]"
         And I key into the current element stored value "username"
         And I select the element by id "login__user_password"
